@@ -9,8 +9,11 @@ public class CameraScript : MonoBehaviour
 
     void Update()
     {
-        Vector3 position = transform.position;
-        position.x = John.transform.position.x;
-        transform.position = position;
+        if (John != null)
+        {
+            Vector3 position = transform.position;
+            position.x = John.transform.position.x;
+            transform.position = position;
+        }
     }
 }
